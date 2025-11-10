@@ -285,5 +285,12 @@ int sc_main(int argc, char* argv[])
     sc_start();
     sc_close_vcd_trace_file(wf);
     
+    #ifdef PROCESSOR_STAT
+    for (size_t i = 0; i < processors.size(); ++i) {
+        std::cout << "PROCESSOR CALCULATED [" << i << "]" << 
+            processors[i].count_neurons_calc << " NEURONS" << std::endl;
+    }
+    #endif
+
     return(0);
 }

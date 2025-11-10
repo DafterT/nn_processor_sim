@@ -75,6 +75,9 @@ void PROCESSOR::process() {
         wait();
         resmem_w_o = false;
         is_working = false;
+        #ifdef PROCESSOR_STAT
+        count_neurons_calc += 1;
+        #endif
     }
 }
 
@@ -82,12 +85,12 @@ void PROCESSOR::add_to_queue() {
     if (queue_address_i == address && queue_w_i 
         && queue_nn_number.size() < QUEUE_SIZE) {
         queue_nn_number.push_back(queue_data_i);
-        #ifdef PROCESSOR_DEBUG
+        //#ifdef PROCESSOR_DEBUG
         std::cout << "["<< sc_time_stamp() << "] [PROCESSOR] ["
             <<address<<"] ADD TO QUEUE: " 
             << queue_data_i << " QUEUE SIZE: "
             << queue_nn_number.size() << std::endl;
-        #endif
+        //#endif
         contr_empty_o = false;
     }
     queue_size_o = queue_nn_number.size();

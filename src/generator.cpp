@@ -51,6 +51,7 @@ void GENERATOR::generate() {
             wait();
             break;
         case states::GENERATE:
+            wait();
             int queue_min_ind = find_min_index(queue_size_i);
             if (queue_size_i[queue_min_ind] < QUEUE_SIZE) {
                 #ifdef GEN_DEBUG
@@ -66,13 +67,10 @@ void GENERATOR::generate() {
                     #ifdef GEN_DEBUG
                     std::cout << "["<< sc_time_stamp() << "] [GENERATOR] GENERATOR STOP" << std::endl;
                     #endif
-                } 
-                wait();
-                w_o = false;
-            } else {
-                wait();
-                w_o = false;
+                }
             }
+            wait();
+            w_o = false;
             break;
         }
     }

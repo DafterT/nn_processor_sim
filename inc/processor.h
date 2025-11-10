@@ -38,6 +38,9 @@ SC_MODULE(PROCESSOR)
     void process();
     void add_to_queue();
     
+    #ifdef PROCESSOR_STAT
+    int count_neurons_calc = 0;
+    #endif
 private: 
     int address = -1;
     bool is_working = false;
