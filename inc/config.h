@@ -11,8 +11,9 @@
 #define NEXT_LAYER_DEBUG
 #define PROCESSOR_DEBUG
 #define CONTROLLER_DEBUG
+#define GEN_DEBUG
+#define PROCESSOR_INPUT_DEBUG
 */
 #define PROCESSOR_STAT
-#define GEN_DEBUG
 
 #endif
