@@ -1,0 +1,17 @@
+#ifndef CONFIG
+#define CONFIG
+
+#define COUNT_PC_UNIT 7
+#define QUEUE_SIZE 5
+#define MEM_SIZE 1024
+/*
+#define LAYER_STORAGE_DEBUG
+#define PREVIOUS_LAYER_SIZE_DEBUG
+#define PREV_LAYER_CONTROLLER_DEBUG
+#define NEXT_LAYER_DEBUG
+#define GEN_DEBUG
+#define PROCESSOR_DEBUG
+#define CONTROLLER_DEBUG
+*/
+
+#endif
